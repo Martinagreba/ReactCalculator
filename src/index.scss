@@ -1,0 +1,74 @@
+$bg-light: #e0e0e0;
+$bg-calculator: #2d2d2d;
+$bg-display: #1f1f1f;
+$color-display: #fff;
+$btn-color: #444;
+$btn-hover: #666;
+$btn-clear: #e68739;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $bg-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.calculator {
+  background-color: $bg-calculator;
+  padding: 20px;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  background: linear-gradient(145deg, #2f2f2f, #252525);
+
+&__display {
+  background-color: $bg-display;
+  color: $color-display;
+  font-size: 32px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: right;
+  overflow-x: auto;
+}
+
+&__button-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+&__button {
+  padding: 15px;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: $btn-color;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $btn-hover;
+  }
+
+
+&--equal {
+  grid-column: span 4;
+  padding: 20px;
+  font-size: 26px;
+}
+
+&--clear{
+  background-color: $btn-clear;
+}
+}
+}
